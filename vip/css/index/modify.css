@@ -1,0 +1,103 @@
+.video-container {
+  margin: auto;
+  text-align: center;
+}
+video {
+  width: 50%;
+  height: 70vh;
+}
+.review-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+
+  text-align: center;
+}
+.review-container ul > li {
+  list-style: none;
+}
+.review-container h3 {
+  color: #fff;
+}
+.review-container h1 {
+  color: #fff;
+  padding-top: 10px;
+}
+.review-container > div {
+  background-color: #1a1c34;
+  padding: 10px;
+  padding: 20px 25px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.review-container > div img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.withdrawal-detail-c {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.withdrawal-detail-c img {
+  width: 30px;
+}
+.deposit-withdrawal-container > .wpb_wrapper div {
+  width: 40vw;
+  margin: 4px;
+}
+.deposit-withdrawal-container > .wpb_wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_none.chart_list>li{
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+  text-align: center;
+}
+.list_none.chart_list>li h6{
+  color: #fff;
+}
+
+/* #mobile_app{
+position: absolute;
+} */
+
+@media (max-width: 699px) {
+  video {
+    width: 80%;
+    height: 80%;
+  }
+  .review-container > div {
+    width: 100%;
+  }
+  .deposit-withdrawal-container > .wpb_wrapper div {
+    /* width: 80vw; */
+    width: 100%;
+    margin: 4px;
+  }
+  .deposit-withdrawal-container {
+    text-align: center;
+    width: 90vw;
+    max-width: 90vw;
+    overflow-x: hidden;
+  }
+  .deposit-withdrawal-container > .wpb_wrapper {
+    /* flex-wrap: wrap;
+    margin: auto; */
+    flex-direction: column;
+  }
+}
+
+
+
+

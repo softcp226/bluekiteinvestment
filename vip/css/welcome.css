@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins&display=swap");
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+
+@media (max-width:499px) {
+  input,select{
+   -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+ 
+width: 90vw;
+margin: 2px;
+padding: 15px;
+ /* box-shadow: 0 3px 3px 0 rgba(44, 43, 43, 0.2); */
+ border-radius: 100px;
+}
+
+}
+
+
+@media (min-width:499px) {
+  input,select{
+   -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  /* -ms-box-sizing:content-box;
+-moz-box-sizing:content-box;
+-webkit-box-sizing:content-box; 
+box-sizing:content-box; */
+width: 190px;
+margin: 2px;
+padding: 10px;
+ /* box-shadow: 0 3px 3px 0 rgba(44, 43, 43, 0.2); */
+ border-radius: 100px;
+}
+
+}
+
+
+@media (min-width:700px) {
+  input,select{
+   -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  /* -ms-box-sizing:content-box;
+-moz-box-sizing:content-box;
+-webkit-box-sizing:content-box; 
+box-sizing:content-box; */
+width: 300px;
+margin: 2px;
+padding: 10px;
+ /* box-shadow: 0 3px 3px 0 rgba(44, 43, 43, 0.2); */
+ border-radius: 100px;
+}
+
+}
+
+main {
+  text-align: center;
+  margin-top: 5%;
+  width: 80vw;
+  margin: auto;
+}
+
+.beneficts_container{
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.beneficts_container h4{
+    padding: 15px 25px;
+    box-shadow: 0 3px 3px 0 rgba(44, 43, 43, 0.2);
+
+}
+
+.head_info{
+    text-align: left;
+    margin-top: 40px;
+}
+
+.flex-input{
+display: flex;
+align-items: flex-start;
+flex-wrap: wrap;
+align-content: space-between;
+}
+
+button{
+  /* 
+  display: inline;
+ text-align: left; */
+position: absolute;
+   width:200px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+  /* border:1px red solid; */
+  left: 10%;
+  padding: 10px;
+ /* box-shadow: 0 3px 3px 0 rgba(44, 43, 43, 0.2); */
+ border-radius: 9px;
+ margin-top: 5px;
+}
+
+
+a{
+   border-radius: 20px;
+    border: 1px solid #0c0e28;
+    background: #0c0e28;
+   
+     cursor: pointer;
+   
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 80px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-out;
+
+    /* position: absolute; */
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    display: inline-block;
+}

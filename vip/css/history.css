@@ -1,0 +1,82 @@
+figure.history-container {
+  box-shadow: 0 3px 15px rgb(0 0 0 / 5%);
+  background-color: #ffff;
+  /* width: 96vw;
+    max-width:96vw ; */
+  margin: auto;
+  color: #152c5b;
+  width: 100%;
+  max-width: 97%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+  overflow-x: scroll;
+}
+
+.history-table {
+  width: 1100px;
+}
+
+.history-table section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  position: relative;
+  /* right: 15vw; */
+}
+
+.history-table h4 {
+  color: rgb(56, 47, 47);
+  font-size: 12.5px;
+  text-transform: capitalize;
+  width: 160px;
+  overflow: hidden;
+
+  word-break: break-all;
+  text-align: center;
+}
+
+.table-list-credit h4,
+.table-list-debit h4 {
+  /* color: #152c5b;
+  color: #152c5b; */
+  text-align: center;
+}
+h4.status-success {
+  background-color: green;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+h4.status-pending {
+  background-color: #152c5b;
+  padding: 8px;
+  border-radius: 5px;
+
+  color: #fff;
+}
+h4.status-fail {
+  background-color: red;
+
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+/* } */
+.bal {
+  width: 90%;
+  position: relative;
+  left: 10%;
+}
+
+@media (min-width: 1100px) {
+  figure.history-container {
+    max-width: 96%;
+    overflow-x: unset;
+  }
+  .history-table {
+    width: 100%;
+  }
+}
