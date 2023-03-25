@@ -31,7 +31,7 @@ function setCookie_01(user, token) {
   //     navigate=param[0]
   // }
   // if(navigate)return window.location.replace(navigate)
-  window.location.replace("/complete-registration.html");
+  window.location.replace("/vip/complete-registration.html");
 }
 
 const loginUser = async (email, password) => {
@@ -57,7 +57,7 @@ const loginUser = async (email, password) => {
     document.querySelector("#login").innerHTML = "success";
     setCookie(result.message.user, result.token);
     if (result.user_info) return window.location.replace("/vip/dashboard.html");
-    window.location.replace("/vip//welcome.html");
+    window.location.replace("/vip/welcome.html");
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#login").innerHTML = "try again";
@@ -170,16 +170,18 @@ const signUpButton = document.getElementById("signUp");
 const signInButton = document.getElementById("login");
 const container = document.getElementById("container");
 
-signUpButton.addEventListener("click", () => {
-  container.classList.add("right-panel-active");
-});
+// signUpButton.addEventListener("click", () => {
+//   container.classList.add("right-panel-active");
+// });
 
 // signInButton.addEventListener("click", () => {
 //   container.classList.remove("right-panel-active");
 // });
 
 // document.addEventListener("DOMContentLoaded",()=>{
-document.querySelector(".ghost").onclick = () =>
-  container.classList.remove("right-panel-active");
+// document.querySelector(".ghost").onclick = () =>
+//   container.classList.remove("right-panel-active");
 
 // })
+
+// window.location

@@ -107,7 +107,7 @@ copyBtn.onclick = () => copyToClipboard();
   const nextbtn = document.createElement("a");
   nextbtn.className = "btn btn-dark";
   nextbtn.innerHTML = "I have made payment";
-  nextbtn.href = `/submit-receipt.html?${getDepositID()}`;
+  nextbtn.href = `/vip/submit-receipt.html?${getDepositID()}`;
 
 
 

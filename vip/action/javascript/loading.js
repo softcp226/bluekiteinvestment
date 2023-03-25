@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (width >= 100) {
       width = 99;
       clearInterval(interval);
-      window.location.replace(`/action/success.html`);
+      window.location.replace(`/vip/action/success.html`);
     }
   }, 30);
 });

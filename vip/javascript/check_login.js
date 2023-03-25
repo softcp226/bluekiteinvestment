@@ -35,5 +35,8 @@ const look_for_user = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "/vip/login.html";
 })("token");
+
+
+// window.location

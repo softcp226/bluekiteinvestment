@@ -44,7 +44,7 @@ const submit_receipt = async (form) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "success";
-    window.location.href = "vip/action/loading.html";
+    window.location.href = "/vip/action/loading.html";
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#submit").innerHTML = "Try again";

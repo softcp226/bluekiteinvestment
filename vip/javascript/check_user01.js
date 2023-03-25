@@ -12,7 +12,7 @@ const look_for_user = (cname) => {
     }
   }
   // return "";
-  window.location.href = "vip//register.html";
+  window.location.href = "/vip//register.html";
 };
 
 // let user_is_active = look_for_user("is_active");

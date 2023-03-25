@@ -6,3 +6,4 @@
 //     window.location.replace("https://www.panteramining.com");
 //   }
 // })();
+// window.location

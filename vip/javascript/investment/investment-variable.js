@@ -11,3 +11,6 @@ hide_error = (element) => {
 const display_error = (element) => {
   element.style.border = "2px solid red";
 };
+
+
+// window.location
