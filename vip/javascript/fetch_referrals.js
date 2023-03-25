@@ -49,7 +49,7 @@ let handle_cancel_investment = async (button, investment) => {
       return;
     }
     button.innerHTML = "success";
-    window.location.href = "/my-investment.html";
+    window.location.href = "/vip/my-investment.html";
   } catch (err) {
     alert(err.message);
     button.innerHTML = "try again";
@@ -123,3 +123,5 @@ const shape_result = (referrals) => {
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+
+// window.location;

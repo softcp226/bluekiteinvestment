@@ -19,7 +19,7 @@ const fetch_recover_password = async (email) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "Success";
-    window.location.href = "/success.html";
+    window.location.href = "/vip/success.html";
     // setText(result.message);
   } catch (err) {
     document.querySelector("#submit").innerHTML = "Try Again";
@@ -36,3 +36,7 @@ document.querySelector("#submit").onclick = () => {
 document.querySelector("input").onkeyup = () => {
   document.querySelector("input").style.border = "2px solid #fff";
 };
+
+
+
+// window.location;

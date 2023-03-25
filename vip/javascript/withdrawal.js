@@ -12,7 +12,7 @@ const checkCookie = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "/vip/login.html";
 };
 
 const handle_withdrawal = async (form) => {
@@ -34,7 +34,7 @@ const handle_withdrawal = async (form) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "success";
-    window.location.href = `/action/loading.html?${result.message}`;
+    window.location.href = `/vip/action/loading.html?${result.message}`;
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#submit").innerHTML = "try again";
@@ -72,3 +72,7 @@ document.querySelectorAll("select").forEach((select) => {
     select.style.border = "2px solid #fff";
   };
 });
+
+
+
+//window.location

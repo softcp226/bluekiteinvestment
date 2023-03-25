@@ -13,3 +13,4 @@ document.querySelectorAll("a").forEach((button) => {
     window.location.href = `${button.href}`;
   };
 });
+

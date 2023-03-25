@@ -20,7 +20,7 @@ const get_user = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "/vip/login.html";
 };
 const submit_receipt = async (form) => {
   document.querySelector("#submit").innerHTML = "processing...";
@@ -44,7 +44,7 @@ const submit_receipt = async (form) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "success";
-    window.location.href = "/action/loading.html";
+    window.location.href = "vip/action/loading.html";
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#submit").innerHTML = "Try again";
@@ -72,3 +72,6 @@ document.querySelector("#submit").onclick = () => {
     deposit_request_id,
   });
 };
+
+
+// window.location;

@@ -13,7 +13,7 @@ function setCookie(user, token) {
     //   navigate = param[0];
     // }
     // if (navigate) return window.location.replace(navigate);
-   window.location.replace("/dashboard.html")
+   window.location.replace("/vip/dashboard.html")
   }
 
 // function setCookie_01(user, token) {
@@ -55,7 +55,7 @@ const loginUser = async (email, password) => {
     }
     document.querySelector("#login").innerHTML = "success";
     setCookie( result.message.user, result.token);
-    window.location.replace("/dashboard.html");
+    window.location.replace("/vip/dashboard.html");
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#login").innerHTML = "try again";
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       // return "";
-      window.location.href = "/login.html";
+      window.location.href = "/vip/login.html";
     };
 
 let user = getCookie("user");
@@ -215,3 +215,6 @@ let token_01 = getCookie("token_01");
   document.querySelector(".ghost").onclick = () =>
     container.classList.remove("right-panel-active");
 });
+
+
+//window.location

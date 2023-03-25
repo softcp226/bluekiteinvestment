@@ -69,3 +69,6 @@ const setText2 = (user) => {
     alert(error.message);
   }
 })();
+
+
+// window.location;

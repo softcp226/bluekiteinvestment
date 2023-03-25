@@ -83,3 +83,4 @@ const shape_result = (userInfo) => {
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+// window.location;

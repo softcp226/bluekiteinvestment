@@ -179,3 +179,6 @@ copyBtn.onclick = () => copyToClipboard();
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+
+
+// window.location;

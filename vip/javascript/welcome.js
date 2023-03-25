@@ -12,7 +12,7 @@ const getCookie = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "/vip/login.html";
 };
 
 handle_submit_userInfo = async (data) => {
@@ -46,7 +46,7 @@ handle_submit_userInfo = async (data) => {
       document.querySelector("#errMessage").innerHTML = result.errMessage;
     } else {
       document.querySelector("#next").innerHTML = "Success";
-      window.location.href = "/dashboard.html";
+      window.location.href = "/vip/dashboard.html";
     }
   } catch (error) {
     document.querySelector("#next").innerHTML = "Try again";
@@ -94,3 +94,6 @@ document.querySelector("#next").onclick = () => {
 document.querySelectorAll("input").forEach((input) => {
   input.onkeyup = () => (input.style.border = "2px solid #000");
 });
+
+
+// window.location;

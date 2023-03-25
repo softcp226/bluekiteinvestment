@@ -8,7 +8,7 @@ const getParam = () => {
 
 (() => {
   const reset_token = getParam();
-  if (!reset_token) return (window.location.href = "/login.html");
+  if (!reset_token) return (window.location.href = "/vip/login.html");
 })();
 
 const change_password = async (user_form) => {
@@ -30,7 +30,7 @@ const change_password = async (user_form) => {
       return;
     } else {
       document.querySelector("#submit").innerHTML = "Success";
-      window.location.href = "/login.html";
+      window.location.href = "/vip/login.html";
     }
   } catch (err) {
     // console.log(err);
@@ -105,3 +105,6 @@ document.querySelectorAll("input").forEach(
       document.querySelector(".errMessage").innerHTML = "";
     })
 );
+
+
+// window.location;

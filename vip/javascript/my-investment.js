@@ -49,7 +49,7 @@ let handle_cancel_investment = async (button, investment) => {
       return;
     }
     button.innerHTML = "success";
-    window.location.href = "/my-investment.html";
+    window.location.href = "/vip/my-investment.html";
   } catch (err) {
     alert(err.message);
     button.innerHTML = "try again";
@@ -85,16 +85,17 @@ const createAndAppendElement = (element) => {
   AMTH4.innerHTML = `$${element.amount
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-  RTH4.innerHTML =element.return_time;
+  RTH4.innerHTML = element.return_time;
   // IVP.innerHTML = element.investment_plan;
   // PT_LS.innerHTML = `$${element.pending_profit
   //   .toString()
   //   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
 
   // PT_LS.style.color = element.show_loss ? "red" : "green";
-  EPH4.innerHTML = `$${element.pending_profit.toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;;
-    EPH4.style.color="green"
+  EPH4.innerHTML = `$${element.pending_profit
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
+  EPH4.style.color = "green";
   AN.innerHTML = "Cancel";
   AN.className = "status-fail";
   AN.onclick = () => handle_cancel_investment(AN, element._id);
@@ -151,3 +152,5 @@ const shape_result = (investments) => {
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+
+// window.location;

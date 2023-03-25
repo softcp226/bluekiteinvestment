@@ -20,7 +20,7 @@ const getCookie = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "vip//login.html";
 };
 
 
@@ -56,3 +56,6 @@ setText(result.message)
 }
 
 )()
+
+
+// window.location;

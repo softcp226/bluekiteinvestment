@@ -251,7 +251,7 @@ const checkCookie = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/login.html";
+  window.location.href = "/vip/login.html";
 };
 
 let deposit_amount = document.querySelector("#amount");
@@ -342,7 +342,7 @@ const handle_submit_deposit = async (form) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "success";
-    window.location.href = `payment.html?${result.message}`;
+    window.location.href = `/vip/payment.html?${result.message}`;
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#submit").innerHTML = "try again";
@@ -369,3 +369,6 @@ document.querySelector("#submit").onclick = () => {
     currency: currency.value,
   });
 };
+
+
+// window.location;
