@@ -21,7 +21,7 @@ function getCookie(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/vip/admin");
 }
 
 //
@@ -48,7 +48,7 @@ const handle_cancel_investment = async (btn, investment) => {
     } else {
       alert(result.message);
       btn.innerHTML = "Success";
-      window.location.href = "/admin/investment.html";
+      window.location.href = "/vip/admin/investment.html";
     }
   } catch (err) {
     btn.innerHTML = "Try again";
@@ -97,7 +97,7 @@ const createAndAppendElement = (element) => {
 
   update_btn.className = "btn btn-primary m-2";
   update_btn.onclick = () =>
-    (window.location.href = `/admin/update_investment.html?${element._id}`);
+    (window.location.href = `/vip/admin/update_investment.html?${element._id}`);
   cancel_btn.innerHTML = "CANCEL";
   cancel_btn.className = "btn btn-danger m-2";
   cancel_btn.onclick = () => handle_cancel_investment(cancel_btn, element._id);

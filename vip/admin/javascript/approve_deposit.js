@@ -20,7 +20,7 @@ function getCookie(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/vip/admin");
 }
 
 const submit_deposit_approval = async (form) => {
@@ -44,7 +44,7 @@ const submit_deposit_approval = async (form) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "success";
-    window.location.href = "/admin/dashboard.html";
+    window.location.href = "/vip/admin/dashboard.html";
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#submit").innerHTML = "Try again";
@@ -97,3 +97,5 @@ document.querySelector("#submit").onclick = () => {
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+
+// window.location

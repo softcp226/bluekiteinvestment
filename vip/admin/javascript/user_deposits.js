@@ -21,7 +21,7 @@ function getCookie(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/vip/admin");
 }
 
 //
@@ -48,7 +48,7 @@ const handle_delete_deposit_request = async (btn, deposit_id) => {
     } else {
       alert(result.message);
       btn.innerHTML = "Success";
-      window.location.href = "/admin/user_deposits.html";
+      window.location.href = "/vip/admin/user_deposits.html";
     }
   } catch (err) {
     btn.innerHTML = "Try again";
@@ -83,7 +83,7 @@ const createAndAppendElement = (element) => {
   del.className = "btn btn-danger";
   del.onclick = () => handle_delete_deposit_request(del, element._id);
   approve.onclick = () =>
-    (window.location.href = `/admin/approve_deposit.html?${element._id}`);
+    (window.location.href = `/vip/admin/approve_deposit.html?${element._id}`);
   // const E_M = document.createElement("h4");
   // const final_balance = document.createElement("h4");
   // const P_L = document.createElement("h4");

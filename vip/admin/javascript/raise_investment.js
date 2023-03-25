@@ -20,7 +20,7 @@ function getCookie(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/vip/admin");
 }
 
 const handle_raise_investment = async (form) => {
@@ -43,7 +43,7 @@ const handle_raise_investment = async (form) => {
       return;
     }
     document.querySelector("#submit").innerHTML = "success";
-    window.location.href = "/admin/dashboard.html";
+    window.location.href = "/vip/admin/dashboard.html";
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#submit").innerHTML = "Try again";

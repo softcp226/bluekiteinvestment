@@ -21,7 +21,7 @@ function getCookie(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/vip/admin");
 }
 
 //
@@ -48,7 +48,7 @@ const handle_delete_withdrawal = async (btn, withdrawal_request) => {
     } else {
       alert(result.message);
       btn.innerHTML = "Success";
-      window.location.href = "/admin/withdrawal.html";
+      window.location.href = "/vip/admin/withdrawal.html";
     }
   } catch (err) {
     btn.innerHTML = "Try again";

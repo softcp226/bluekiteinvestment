@@ -12,7 +12,7 @@ const look_for_admin = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/vip/admin";
 };
 
 // let user_is_active = look_for_user("is_active");
@@ -40,5 +40,5 @@ const look_for_admin = (cname) => {
     }
   }
   // return "";
-  window.location.href = "/admin";
+  window.location.href = "/vip/admin";
 })("admin_token");

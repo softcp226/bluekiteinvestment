@@ -21,7 +21,7 @@ function getCookie(cname) {
     }
   }
   // return "";
-  window.location.replace("/admin");
+  window.location.replace("/vip/admin");
 }
 
 //
@@ -48,7 +48,7 @@ const handle_delete_user = async (event, user_id) => {
     } else {
       alert(result.message);
       event.target.innerHTML = "Success";
-      window.location.href = "/admin/dashboard.html";
+      window.location.href = "/vip/admin/dashboard.html";
     }
   } catch (err) {
     event.target.innerHTML = "Try again";
@@ -91,12 +91,12 @@ const createAndAppendElement = (element) => {
   RIBTN.className = "btn btn-primary";
 
   CCBTN.onclick = () =>
-    (window.location.href = `/admin/fund-user.html?${element._id}`);
+    (window.location.href = `/vip/admin/fund-user.html?${element._id}`);
 
   DCBTN.onclick = () => handle_delete_user(event, element._id);
 
   RIBTN.onclick = () =>
-    (window.location.href = `/admin/raise-investment.html?${element._id}`);
+    (window.location.href = `/vip/admin/raise-investment.html?${element._id}`);
 
   section.append(E_M, final_balance, P_L, AI, RF, CCBTN, DCBTN,RIBTN);
   document.querySelector(".history-table").append(section);
@@ -129,3 +129,5 @@ const setText = (userInfo) => {
     document.querySelector(".errMessage").innerHTML = err.message;
   }
 })();
+
+// window.location

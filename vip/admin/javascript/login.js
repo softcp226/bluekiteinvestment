@@ -4,7 +4,7 @@ const setCookie = (token, admin) => {
   let expires = "expires=" + d.toUTCString();
   document.cookie = `admin_token=${token} ; ${expires}`;
   document.cookie = `admin=${admin} ; ${expires}`;
-  window.location.replace("/admin/dashboard.html");
+  window.location.replace("/vip/admin/dashboard.html");
 };
 
 const check_user = () => {};
