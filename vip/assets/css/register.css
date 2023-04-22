@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
 /* #6dd5ed */   
 
@@ -128,7 +129,7 @@ input,select {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  height: 1000px;
+  height: 1500px;
   width: 480px;
   max-width: 100%;
 }
@@ -142,7 +143,7 @@ input,select {
 
 .sign-in-container {
   top: 0;
-  height: 50%;
+  height: 43%;
   z-index: 2;
 }
 
@@ -152,10 +153,11 @@ input,select {
 
 .sign-up-container {
   top: 0;
-  height: 50%;
+  height: 100%;
   opacity: 0;
   z-index: 1;
   width: 100%;
+  
 }
 
 .container.right-panel-active .sign-up-container {
@@ -309,10 +311,12 @@ input,select {
     left: 0;
     width: 50%;
     height: 100%;
+   
   }
 
   .container.right-panel-active .sign-up-container {
     transform: translateX(100%);
+   
   }
 
   .overlay-container {
@@ -384,3 +388,7 @@ input,select {
 }
   
 }
+
+
+
+/* sign-up-container */
