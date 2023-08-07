@@ -32,7 +32,7 @@ const handle_delete_withdrawal = async (btn, withdrawal_request) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
+      "https://bluekiteinvestment-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
       {
         method: "DELETE",
         headers: { "content-type": "application/json" },
@@ -131,7 +131,7 @@ const setText = (userInfo) => {
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/admin/withdrawal/fetch",
+      "https://bluekiteinvestment-backend.glitch.me/api/admin/withdrawal/fetch",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

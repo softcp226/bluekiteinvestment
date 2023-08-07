@@ -27,7 +27,7 @@ const handle_deposit = async (form) => {
   document.querySelector("#submit").innerHTML = "processing...";
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/admin/user/fund",
+      "https://bluekiteinvestment-backend.glitch.me/api/admin/user/fund",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

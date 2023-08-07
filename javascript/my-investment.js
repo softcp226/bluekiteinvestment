@@ -28,9 +28,9 @@ let handle_cancel_investment = async (button, investment) => {
   try {
     button.innerHTML = "proccessing...";
     const response = await fetch(
-      // "http://localhost:5000/api/user/investment/cancel",
+      //  "http://localhost:5000/api/user/investment/cancel",
 
-      "https://softjovial-backend.glitch.me/api/user/investment/cancel",
+      "https://bluekiteinvestment-backend.glitch.me/api/user/investment/cancel",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -85,7 +85,7 @@ const createAndAppendElement = (element) => {
   AMTH4.innerHTML = `$${element.amount
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-  RTH4.innerHTML =element.return_time;
+  RTH4.innerHTML =element.completion_time;
   // IVP.innerHTML = element.investment_plan;
   // PT_LS.innerHTML = `$${element.pending_profit
   //   .toString()
@@ -132,7 +132,7 @@ const shape_result = (investments) => {
   let user = getCookie("user");
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/user/investments/fetch",
+      "https://bluekiteinvestment-backend.glitch.me/api/user/investments/fetch",
       // "http://localhost:5000/api/user/investments/fetch",
 
       {

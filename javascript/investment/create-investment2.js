@@ -7,8 +7,8 @@ const handle_submit_request = async (form) => {
   document.querySelector("#submit").innerHTML = "proccesing...";
   try {
     const response = await fetch(
-      "http://localhost:5000/api/user/create_investment",
-      // "https://sterileenergy-backend01.glitch.me/api/user/create_investment",
+      // "http://localhost:5000/api/user/create_investment",
+      "https://bluekiteinvestment-backend.glitch.me/api/user/create_investment",
       {
         method: "POST",
         headers: { "content-type": "application/json" },
@@ -17,7 +17,7 @@ const handle_submit_request = async (form) => {
           user,
           investment_plan: form.plan,
           investment_amount: form.amount,
-          // completion_time: form.completion_time,
+          completion_time: form.completion_time,
           // return_time: return_time.value,
           profit: form.profit,
         }),
@@ -60,18 +60,17 @@ const handle_button_request = () => {
       });
       break;
 
-
     case "Premium Plan":
       if (!amount.value) return;
       if (!plan.value) return;
       if (parseInt(amount.value) < 5000) return show_err();
       disable_show_err();
       // if (plan.value == "daily_return") {
-      var percentage = "20% return after 24 hours";
+      var percentage = "15% return after 24 hours";
       var earning = `Expected Earning: $${Math.round(
-        (amount.value / 100) * 20,
+        (amount.value / 100) * 15,
       )}`;
-      profit = Math.round((amount.value / 100) * 20);
+      profit = Math.round((amount.value / 100) * 15);
       write_percentage(percentage, earning);
       handle_submit_request({
         profit,
@@ -80,18 +79,18 @@ const handle_button_request = () => {
         completion_time: "24 hours",
       });
       break;
-    
-    case "Ultimate Plan":
+
+    case "Diamond Plan":
       if (!amount.value) return;
       if (!plan.value) return;
       if (parseInt(amount.value) < 7000) return show_err();
       disable_show_err();
       // if (return_time.value == "daily_return") {
-      var percentage = "30% return after 24 hours";
+      var percentage = "25% return after 24 hours";
       var earning = `Expected Earning: $${Math.round(
-        (amount.value / 100) * 30,
+        (amount.value / 100) * 25,
       )}`;
-      profit = Math.round((amount.value / 100) * 30);
+      profit = Math.round((amount.value / 100) * 25);
       write_percentage(percentage, earning);
       handle_submit_request({
         profit,
@@ -100,7 +99,6 @@ const handle_button_request = () => {
         completion_time: "24 hours",
       });
       break;
-    
 
     default:
       handle_keychange();

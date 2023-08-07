@@ -45,7 +45,7 @@ const getCookie = (cname) => {
   const token = getCookie("token");
   try {
     const response = await fetch(
-      "https://softjovial-backend.glitch.me/api/user/find",
+      "https://bluekiteinvestment-backend.glitch.me/api/user/find",
       // "http://localhost:5000/api/user/find",
       {
         method: "POST",

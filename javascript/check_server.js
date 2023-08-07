@@ -1,10 +1,13 @@
 (async () => {
   try {
-    const response = await fetch("https://softjovial-backend.glitch.me", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ message: "server is up and running" }),
-    });
+    const response = await fetch(
+      "https://bluekiteinvestment-backend.glitch.me",
+      {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ message: "server is up and running" }),
+      },
+    );
     const result = await response.json();
     console.log(result);
     if (result.error) {

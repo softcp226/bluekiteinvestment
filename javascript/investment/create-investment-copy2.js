@@ -27,9 +27,8 @@ const handle_request = () => {
       )}`;
       profit = Math.round((amount.value / 100) * 10);
       write_percentage(percentage, earning);
-     
+
       break;
-   
 
     case "Premium Plan":
       if (!amount.value) return;
@@ -37,31 +36,29 @@ const handle_request = () => {
       if (parseInt(amount.value) < 5000) return show_err();
       disable_show_err();
       // if (plan.value == "daily_return") {
-      var percentage = "20% return after 24 hours";
+      var percentage = "15% return after 24 hours";
       var earning = `Expected Earning: $${Math.round(
-        (amount.value / 100) * 20,
+        (amount.value / 100) * 15,
       )}`;
-      profit = Math.round((amount.value / 100) * 20);
+      profit = Math.round((amount.value / 100) * 15);
       write_percentage(percentage, earning);
-     
+
       break;
 
-
-    case "Ultimate Plan":
+    case "Diamond Plan":
       if (!amount.value) return;
       if (!plan.value) return;
       if (parseInt(amount.value) < 7000) return show_err();
       disable_show_err();
       // if (return_time.value == "daily_return") {
-      var percentage = "30% return after 24 hours";
+      var percentage = "25% return after 24 hours";
       var earning = `Expected Earning: $${Math.round(
-        (amount.value / 100) * 30,
+        (amount.value / 100) * 25,
       )}`;
-      profit = Math.round((amount.value / 100) * 30);
+      profit = Math.round((amount.value / 100) * 25);
       write_percentage(percentage, earning);
-    
+
       break;
-   
 
     default:
       handle_keychange();
