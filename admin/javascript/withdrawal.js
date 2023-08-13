@@ -26,15 +26,51 @@ function getCookie(cname) {
 
 //
 
-const handle_delete_withdrawal = async (btn, withdrawal_request) => {
+const handle_approve_withdrawal = async (btn, withdrawal_request) => {
   btn.innerHTML = "Proccessing...";
   let token = getCookie("admin_token");
   let admin = getCookie("admin");
   try {
     const response = await fetch(
-      "https://bluekiteinvestment-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/delete",
+      "https://bluekiteinvestment-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/approve",
+      // "http://localhost:5000/api/admin/withdrawal/fetch/withdrawal/approve",
+
       {
-        method: "DELETE",
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ token, admin, withdrawal_request }),
+      },
+    );
+    const result = await response.json();
+    console.log(result);
+    if (result.error) {
+      btn.innerHTML = "Try again";
+      document.querySelector(".errMessage").innerHTML = result.errMessage;
+      alert(result.errMessage);
+    } else {
+      alert(result.message);
+      btn.innerHTML = "Success";
+      window.location.href = "/admin/withdrawal.html";
+    }
+  } catch (err) {
+    btn.innerHTML = "Try again";
+    console.log(err);
+    alert(err.message);
+  }
+};
+
+
+
+const handle_disapprove_withdrawal = async (btn, withdrawal_request) => {
+  btn.innerHTML = "Proccessing...";
+  let token = getCookie("admin_token");
+  let admin = getCookie("admin");
+  try {
+    const response = await fetch(
+      "https://bluekiteinvestment-backend.glitch.me/api/admin/withdrawal/fetch/withdrawal/disapprove",
+      // "http://localhost:5000/api/admin/withdrawal/fetch/withdrawal/disapprove",
+      {
+        method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ token, admin, withdrawal_request }),
       },
@@ -65,7 +101,8 @@ const createAndAppendElement = (element) => {
   const amount = document.createElement("h4");
   const method = document.createElement("h4");
   const wallet = document.createElement("h4");
-  const delBTn = document.createElement("button");
+  const approveBTN = document.createElement("button");
+  const disapproveBTN = document.createElement("button");
   date.innerHTML = element.transaction_date;
   withdrawer.innerHTML = element.user
     ? `${element.user.email} || ${element.user.phone_number}`
@@ -74,15 +111,19 @@ const createAndAppendElement = (element) => {
   withdrawerNames.innerHTML = element.user
     ? `${element.user.first_name} || ${element.user.last_name}`
     : "not found";
-
+console.log(element.withdrawal_amount)
   amount.innerHTML = `$${element.withdrawal_amount
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
   method.innerHTML = element.withdrawal_method;
   wallet.innerHTML = element.wallet;
-  delBTn.innerHTML = "DELETE";
-  delBTn.className = "btn btn-danger";
-  delBTn.onclick = () => handle_delete_withdrawal(delBTn, element._id);
+
+  approveBTN.innerHTML="Approve"
+  approveBTN.className="btn btn-primary"
+  disapproveBTN.innerHTML = "Disapprove";
+  disapproveBTN.className = "btn btn-danger";
+  approveBTN.onclick=()=>handle_approve_withdrawal(approveBTN,element._id)
+  disapproveBTN.onclick = () => handle_disapprove_withdrawal(disapproveBTN, element._id);
   //   const investment_plan = document.createElement("h4");
   //   let amount = document.createElement("h4");
   //   const profit = document.createElement("h4");
@@ -118,7 +159,8 @@ const createAndAppendElement = (element) => {
     amount,
     method,
     wallet,
-    delBTn
+    approveBTN,
+    disapproveBTN,
   );
   document.querySelector(".history-table").append(section);
 };

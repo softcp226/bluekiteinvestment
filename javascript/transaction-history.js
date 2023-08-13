@@ -62,6 +62,8 @@ const shape_result = (userInfo) => {
   try {
     const response = await fetch(
       "https://bluekiteinvestment-backend.glitch.me/api/user/transactions/fetch",
+      // "http://localhost:5000/api/user/transactions/fetch",
+
       {
         method: "POST",
         headers: { "content-type": "application/json" },
